@@ -1,3 +1,62 @@
-<h1>
-  {{title}}
-</h1>
+<md-sidenav-container>
+
+  <md-sidenav #sidenav mode="side" opened="true" class="app-sidenav">
+    <md-list>
+      <md-list-item>Item 1</md-list-item>
+      <md-list-item>Item 2</md-list-item>
+      <md-list-item>Item 3</md-list-item>
+    </md-list>
+
+    <md2-accordion>
+ <md2-accordion-tab *ngFor="let tab of accordions" >
+   {{tab.content}}
+ </md2-accordion-tab>
+</md2-accordion>
+
+  </md-sidenav>
+  <md-toolbar color="primary">
+    <button class="app-icon-button" (click)="sidenav.toggle()">
+      <i class="material-icons app-toolbar-menu">menu</i>
+    </button>
+    BASA - NextBank
+    <span class="app-toolbar-filler"></span>
+  </md-toolbar>
+ <md-card>
+<form class="example-form">
+  <md-input-container class="example-full-width">
+    <input mdInput placeholder="Company (disabled)" disabled value="Google">
+  </md-input-container>
+
+  <table class="example-full-width" cellspacing="0"><tr>
+    <td><md-input-container class="example-full-width">
+      <input mdInput placeholder="First name">
+    </md-input-container></td>
+    <td><md-input-container class="example-full-width">
+      <input mdInput placeholder="Long Last Name That Will Be Truncated">
+    </md-input-container></td>
+  </tr></table>
+
+  <p>
+    <md-input-container class="example-full-width">
+      <textarea mdInput placeholder="Address">1600 Amphitheatre Pkwy</textarea>
+    </md-input-container>
+    <md-input-container class="example-full-width">
+      <textarea mdInput placeholder="Address 2"></textarea>
+    </md-input-container>
+  </p>
+
+  <table class="example-full-width" cellspacing="0"><tr>
+    <td><md-input-container class="example-full-width">
+      <input mdInput placeholder="City">
+    </md-input-container></td>
+    <td><md-input-container class="example-full-width">
+      <input mdInput placeholder="State">
+    </md-input-container></td>
+    <td><md-input-container class="example-full-width">
+      <input mdInput #postalCode maxlength="5" placeholder="Postal Code" value="94043">
+      <md-hint align="end">{{postalCode.value.length}} / 5</md-hint>
+    </md-input-container></td>
+  </tr></table>
+</form>
+</md-card>
+</md-sidenav-container>
