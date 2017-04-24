@@ -1,0 +1,16 @@
+<button class="accordion" (click)="panelA = !panelA;">Section 1</button>
+<div [ngClass]="{'panel': panelA }">
+  <p>Sub Section 1.</p>
+  <p>Sub Section 1.</p>
+  <p>Sub Section 1.</p>
+</div>
+<button class="accordion" (click)="panelB = !panelB;">Section 2</button>
+<div [ngClass]="{'panel': panelB }">
+  <p>Lorem ipsum dolor sit amet.</p>
+</div>
+
+<button class="accordion" (click)="panelC = !panelC;">Section 3</button>
+<div [ngClass]="{'panel': panelC }">
+  <p>Lorem ipsum dolor sit amet.</p>
+</div>
+

@@ -8,12 +8,21 @@ import { MdInputModule, MdSidenavModule, MaterialModule} from '@angular/material
 
 
 import { AppComponent } from './app.component';
+import { SideBarComponent } from './side-bar/side-bar.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { SideBarItemComponent } from './side-bar-item/side-bar-item.component';
+
 
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SideBarComponent,
+    HeaderComponent,
+    FooterComponent,
+    SideBarItemComponent
   ],
   imports: [
     BrowserModule,
