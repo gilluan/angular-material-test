@@ -17,42 +17,74 @@
     <span class="app-toolbar-filler"></span>
   </md-toolbar>
  <md-card>
-<form class="example-form">
-  
-  <md-input-container class="example-full-width">
-    <input mdInput placeholder="Company (disabled)" disabled value="Google">
-  </md-input-container>
+  <div class="container">
+    <app-formulario></app-formulario>
+     <!--form #heroForm="ngForm"  *ngIf="active"  (ngSubmit)="onSubmit()">
+       <foton-input fxFlex hero="hero"
+          placeholder="Nome">
+        </foton-input> 
 
-  <table class="example-full-width" cellspacing="0"><tr>
-    <td><md-input-container class="example-full-width">
-      <input mdInput placeholder="First name">
-    </md-input-container></td>
-    <td><md-input-container class="example-full-width">
-      <input mdInput placeholder="Long Last Name That Will Be Truncated">
-    </md-input-container></td>
-  </tr></table>
+      <div class="form-group">
+        <label for="alterEgo">Alter Ego</label>
+        <input type="text" id="alterEgo" class="form-control"
+               name="alterEgo"
+               [(ngModel)]="hero.alterEgo" >
+      </div>
 
-  <p>
-    <md-input-container class="example-full-width">
-      <textarea mdInput placeholder="Address">1600 Amphitheatre Pkwy</textarea>
-    </md-input-container>
-    <md-input-container class="example-full-width">
-      <textarea mdInput placeholder="Address 2"></textarea>
-    </md-input-container>
-  </p>
+      <div class="form-group">
+        <label for="power">Hero Power</label>
+        <select id="power" class="form-control"
+                name="power"
+                [(ngModel)]="hero.power" required
+                #power="ngModel" >
+          <option *ngFor="let p of powers" [value]="p">{{p}}</option>
+        </select>
 
-  <table class="example-full-width" cellspacing="0"><tr>
-    <td><md-input-container class="example-full-width">
-      <input mdInput placeholder="City">
-    </md-input-container></td>
-    <td><md-input-container class="example-full-width">
-      <input mdInput placeholder="State">
-    </md-input-container></td>
-    <td><md-input-container class="example-full-width">
-      <input mdInput #postalCode maxlength="5" placeholder="Postal Code" value="94043">
-      <md-hint align="end">{{postalCode.value.length}} / 5</md-hint>
-    </md-input-container></td>
-  </tr></table>
-</form>
+        <div *ngIf="power.errors && power.touched" class="alert alert-danger">
+          <div [hidden]="!power.errors.required">Power is required</div>
+        </div>
+      </div>
+
+      {{heroForm.form.valid}}
+      <button type="submit" class="btn btn-default"
+             [disabled]="!heroForm.form.valid">Submit</button>
+      <button type="button" class="btn btn-default"
+             (click)="addHero()">New Hero</button>
+    </form-->
+
+    <!-- Coluna 1 -->
+    <!--div fxLayout="row">
+        <foton-input fxFlex
+          placeholder="Nome">
+        </foton-input> 
+        <foton-input fxFlex="30%"
+          placeholder="Identidade" >
+        </foton-input> 
+        <foton-input fxFlex="20%"
+          placeholder="Rg" >
+        </foton-input> 
+    </div>
+    <div fxLayout="row">
+      <foton-input fxFlex="100%"
+          placeholder="Cpf" >
+        </foton-input> 
+    </div>
+    <div fxLayout="row">
+        <foton-input fxFlex
+          placeholder="Data Nascimento" >
+        </foton-input> 
+        <foton-input fxFlex
+          placeholder="Xpto" >
+        </foton-input> 
+        <foton-input fxFlex
+          placeholder="Xpto" >
+        </foton-input> 
+    </div-->
+  </div>
+
+
+ 
+ 
+
 </md-card>
 </md-sidenav-container>

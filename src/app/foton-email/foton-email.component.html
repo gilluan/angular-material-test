@@ -1,0 +1,8 @@
+
+  <md-input-container fxFlex="100%">
+   <input mdInput placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" [(ngModel)]="model.email" name="email" type="email" required>
+    <md-hint *ngIf="errorMessageEmail()" [ngStyle]="{'color': 'red'}" align="start">{{errorMessageEmail()}}</md-hint>  
+  </md-input-container>
+
+
+    
