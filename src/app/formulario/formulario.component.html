@@ -1,5 +1,10 @@
 <form #formVar="ngForm">
   <foton-email></foton-email>
-  <foton-input [model]="pessoa.nome" [form]="formVar"></foton-input>
+  <foton-input 
+    placeholder="Nome"
+    [model]="pessoa.nome" 
+    [form]="formVar">
+  </foton-input>
+  <hr>
   <b>{{ ( formVar.valid ? 'valid': 'invalid' ) }}</b> and <b>{{ (formVar.pristine ?  'pristine' : 'dirty') }}</b>
 </form>
