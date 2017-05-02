@@ -24,6 +24,8 @@ export class FormularioComponent implements OnInit {
   ngOnInit() {
   }
 
+   pessoa: any = { nome: '' }
+
     powers = ['Really Smart', 'Super Flexible', 'Weather Changer'];
   hero = new Hero(18, 'Dr. WhatIsHisWayTooLongName', this.powers[0], 'Dr. What');
   submitted = false;

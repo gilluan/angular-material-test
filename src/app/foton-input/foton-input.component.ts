@@ -11,11 +11,14 @@ export class FotonInputComponent implements OnInit {
   @Input() placeholder: string;
   @Input() size: string;
   @Input() colSize: string;
+  pessoa = { nome: ''}
   //validadores
   @Input('form') parentForm : NgForm;
   @Input('model') model : any;
   @ViewChild('ctrl') ngModel : NgModel;
-  constructor() { }
+  constructor() {
+
+  }
 
   ngAfterViewInit(){
     this.parentForm.control.addControl('input', this.ngModel.control);
